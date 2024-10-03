@@ -48,6 +48,18 @@ button, input, select, textarea {
     text-decoration: underline;
 }
 
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
 /* Navbar */
 header .header-banner {
     text-align: center;
@@ -77,6 +89,13 @@ header .header-banner {
 .navbar .nav-wrapper .nav-item a {
     text-transform: uppercase;
     color: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Navbar */
