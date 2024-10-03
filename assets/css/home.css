@@ -1,67 +1,65 @@
 
 :root {
-    --primary-color: #DC8B4C;
+    --orange : #DC8B4C;
     --secondary-color: #2C3E50;
-    --background-color: #F5F5F5;
-    --text-color: #333333;
+    --white: #fefcff;
+    --black: #121212;
 }
 
 
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    box-sizing: border-box;
-    background-color: #fff;
-    color: #333;
+html, body {
+    height: 100%;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--white);
 }
 
-/* Branding Bar */
-.branding-bar {
-    background-color: #000;
-    text-align: center;
-    padding: 10px 0;
-}
 
-.branding-logo {
-    width: 150px;
-}
-
-/* Navbar */
 .navbar {
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
-    padding: 15px 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: var(--black);
 }
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-}
-
-.nav-links ul {
+  
+ul, ol {
     list-style: none;
-    display: flex;
-    gap: 30px; /* Menambah jarak antar elemen */
-    padding: 0;
 }
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
+  
+a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
+    color: inherit;
 }
 
-/* Wear Basic Differently Section */
+.navbar .nav-logo {
+    width: 130px;
+    object-fit: contain;
+    padding-block: .625rem;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.navbar .nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .nav-wrapper .nav-item a {
+    text-transform: uppercase;
+    color: var(--white);
+}
+header .header-banner {
+    text-align: center;
+    padding-block: 10px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
 .wear-basic {
-    background-color: #000;
+    background-color: var(--white);
     color: #fff;
     padding: 60px 0;
     text-align: center;
@@ -81,68 +79,128 @@ body, html {
 
 .wear-basic-text h2 {
     font-size: 48px;
-    color: #DC8B4C;
+    color: var(--orange);
 }
 
 .wear-basic-text p {
+    color: var(--orange);
     font-size: 20px;
     margin: 20px 0;
 }
 
-.shop-now-btn {
-    background-color: #DC8B4C;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-/* Banner Image Styles */
 .wear-basic-images {
 
-    position: relative; /* Membuat posisi relatif untuk menempatkan gambar */
-    margin-top: 50px; /* Memberi ruang agar teks tidak menutupi gambar */
+    position: relative;
+    margin-top: 50px; 
 }
 
 .image-row {
-    position: relative; /* Membuat setiap baris gambar berada di dalam posisi relatif */
-    display: flex; /* Menampilkan gambar secara horizontal */
-    justify-content: center; /* Menyusun gambar di tengah */
-    margin-bottom: -30px; /* Menumpuk gambar di baris berikutnya */
-    gap: 20px; /* Menambahkan jarak antara gambar */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -30px;
+    gap: 20px;
 }
 
-/* Gaya untuk setiap gambar */
+.image-row img:hover {
+    transform: scale(1.05);
+}
+
+.banner-hero {
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('../images/logo-laskala-basic.png') no-repeat center center/cover;
+    padding: 100px 0;
+    color: var(--black);
+}
+
+.banner-hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.banner-hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.banner-hero-text h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.banner-hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+.banner-hero .shop-now-btn {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-hero .shop-now-btn:hover {
+    background-color: #c67a3d;
+}
+
+.banner-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
 .banner-img {
-    width: 200px; /* Lebar gambar */
-    height: 250px; /* Tinggi gambar */
-    border-radius: 10px; /* Sudut membulat */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    width: 200px;
+    height: 250px; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Mengatur posisi untuk efek tumpang tindih */
+
 .banner-img1 {
-    margin-bottom: 40px; /* Mengatur jarak untuk tumpang tindih ke bawah */
+    margin-bottom: 40px;
     margin-right: 60px;
-    z-index: 1; /* Menempatkan gambar ini di atas */
+    z-index: 1; 
 }
 
 .banner-img2 {
-    margin-bottom: -40px; /* Mengatur jarak untuk tumpang tindih ke bawah */
+    margin-bottom: -40px;
     margin-right: 90px;
-    z-index: 1; /* Menempatkan gambar ini di atas */
+    z-index: 1; 
 }
 
 .banner-img3 {
-    z-index: 2; /* Menempatkan gambar ini di bawah gambar sebelumnya */
+    z-index: 2;
     margin-left: 30px;
     margin-top: -35px;
 }
 
 .banner-img4 {
-    z-index: 2; /* Menempatkan gambar ini di bawah gambar sebelumnya */
+    z-index: 2;
     margin-left: 60px;
     margin-top: -35px;
 }
@@ -165,7 +223,7 @@ body, html {
     display: block;
     width: 100px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--orange);
     margin: 10px auto;
 }
 
@@ -177,7 +235,7 @@ body, html {
 }
 
 .see-all-btn {
-    background-color: var(--primary-color);
+    background-color: var(--orange);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -259,12 +317,12 @@ body, html {
 .product-info p {
     margin: 0;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--orange);
 }
 
 .btn {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: var(--orange);
     color: white;
     padding: 8px 15px;
     border: none;
@@ -281,9 +339,6 @@ body, html {
 
 
 
-.product-card:hover .quick-view {
-    opacity: 1;
-}
 
 @media (max-width: 768px) {
     .top-selection-grid,
@@ -300,7 +355,7 @@ body, html {
 .section-title {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #DC8B4C;
+    color: var(--orange);
 }
 
 
@@ -309,7 +364,7 @@ body, html {
     width: 20rem;
     height: 6px;
     border-radius: 20px;
-    background-color: #DC8B4C;
+    background-color: var(--orange);
     margin: 20px auto 0;
     margin-bottom: 20px;
 }
@@ -322,7 +377,7 @@ body, html {
     margin-top: 40px;
 }
 .order-steps h3 {
-    color: #DC8B4C;
+    color: var(--orange);
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 25px;
@@ -339,15 +394,14 @@ body, html {
 }
 .step i {
     font-size: 2.5em;
-    color: #DC8B4C;
+    color: var(--orange);
     margin-bottom: 10px;
 }
 .step p {
     font-weight: bold;
-    color: #000000;
+    color: var(--secondary-color);
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
