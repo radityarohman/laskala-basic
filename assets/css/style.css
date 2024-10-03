@@ -1,3 +1,17 @@
+:root {
+    --black: #121212;
+    --orange: #DC8B4C;
+    --white: #FEFCFF
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url('/assets/fonts/DMSans-Regular.ttf'),
+         url('/assets/fonts/DMSans-SemiBold.ttf'),
+         url('/assets/fonts/DMSans-Bold.ttf'),
+}
+
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +19,10 @@
 }
 html, body {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: "DM Sans", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    background-color: var(--white);
 }
   
 ul, ol {
@@ -27,6 +42,60 @@ img {
 button, input, select, textarea {
     font-family: inherit;
 }
-  
-  
- 
+/* CSS Reset */
+
+.text-underline {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Navbar */
+header .header-banner {
+    text-align: center;
+    padding-block: 10px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--black);
+}
+
+.navbar .nav-logo {
+    width: 130px;
+    object-fit: contain;
+    padding-block: .625rem;
+}
+
+.navbar .nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .nav-wrapper .nav-item a {
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
