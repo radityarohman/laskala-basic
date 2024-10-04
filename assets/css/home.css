@@ -16,41 +16,6 @@ html, body {
 }
 
 
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--black);
-}
-  
-ul, ol {
-    list-style: none;
-}
-  
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.navbar .nav-logo {
-    width: 130px;
-    object-fit: contain;
-    padding-block: .625rem;
-}
-
-.text-underline {
-    text-decoration: underline;
-}
-
-.navbar .nav-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.navbar .nav-wrapper .nav-item a {
-    text-transform: uppercase;
-    color: var(--white);
-}
 header .header-banner {
     text-align: center;
     padding-block: 10px;
@@ -102,9 +67,6 @@ header .header-banner {
     gap: 20px;
 }
 
-.image-row img:hover {
-    transform: scale(1.05);
-}
 
 .banner-hero {
     background: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('../images/logo-laskala-basic.png') no-repeat center center/cover;
@@ -112,7 +74,7 @@ header .header-banner {
     color: var(--black);
 }
 
-.banner-hero .container {
+.banner-hero .container-hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,6 +96,7 @@ header .header-banner {
 }
 
 .banner-hero-text h1 {
+    color: var(--orange);
     font-size: 48px;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -407,4 +370,37 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+
+@media (max-width: 1200px) {
+    .wear-basic-text {
+        width: 100%;
+        text-align: center;
+    }
+    .wear-basic-content {
+        flex-direction: column;
+    }
+    .top-selection-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .best-sellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-selection-grid,
+    .best-sellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banner-hero-text h1 {
+        font-size: 36px;
+    }
+    .banner-hero-text p {
+        font-size: 16px;
+    }
+    .banner-hero-image img {
+        max-width: 400px;
+    }
 }
