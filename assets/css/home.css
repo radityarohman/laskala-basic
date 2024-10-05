@@ -192,22 +192,9 @@ header .header-banner {
 
 .section-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-}
-
-.see-all-btn {
-    background-color: var(--orange);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.see-all-btn:hover {
-    background-color: #c67a3d;
 }
 
 
