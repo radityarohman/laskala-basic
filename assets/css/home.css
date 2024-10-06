@@ -48,7 +48,7 @@ header .header-banner {
 }
 
 .wear-basic-text p {
-    color: var(--orange);
+    color: var(--secondary-color);
     font-size: 20px;
     margin: 20px 0;
 }
@@ -175,12 +175,20 @@ header .header-banner {
 }
 
 .section-title {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--secondary-color);
-    position: relative;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--orange);
 }
+
+.section-separator {
+    width: 20rem;
+    height: 6px;
+    border-radius: 20px;
+    background-color: var(--orange);
+    margin: 20px auto 0;
+    margin-bottom: 20px;
+}
+    
 .section-title::after {
     content: '';
     display: block;
@@ -290,6 +298,70 @@ header .header-banner {
 
 
 
+.order-steps {
+    background-color: rgba(220, 139, 76, 0.15);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.order-steps h3 {
+    color: var(--orange);
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.step {
+    text-align: center;
+    flex-basis: 20%;
+    margin: 0 10px; 
+    margin-bottom: 20px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 150px; 
+    color: var(--secondary-color);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.step i {
+    font-size: 3em; 
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px; 
+    height: 3px; 
+    width: 20px; 
+    background-color: var(--orange); 
+    transform: translateY(-50%); 
+}
+
+.step:last-child::after {
+    display: none; 
+}
+
+
+
 @media (max-width: 768px) {
     .top-selection-grid,
     .best-sellers-grid {
@@ -302,62 +374,6 @@ header .header-banner {
     }
 }
 
-.section-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--orange);
-}
-
-
-
-.section-separator {
-    width: 20rem;
-    height: 6px;
-    border-radius: 20px;
-    background-color: var(--orange);
-    margin: 20px auto 0;
-    margin-bottom: 20px;
-}
-
-
-.order-steps {
-    background-color: rgba(220, 139, 76, 0.15);
-    padding: 30px;
-    border-radius: 12px;
-    margin-top: 40px;
-}
-.order-steps h3 {
-    color: var(--orange);
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 25px;
-}
-.steps {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.step {
-    text-align: center;
-    flex-basis: 22%;
-    margin-bottom: 20px;
-}
-.step i {
-    font-size: 2.5em;
-    color: var(--orange);
-    margin-bottom: 10px;
-}
-.step p {
-    font-weight: bold;
-    color: var(--secondary-color);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
 
 
 @media (max-width: 1200px) {
