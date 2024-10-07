@@ -24,6 +24,11 @@ html, body {
     line-height: 1.5;
     background-color: var(--white);
 }
+
+::selection {
+    background-color: #DC8B4C; 
+    color: black; 
+}
   
 ul, ol {
     list-style: none;

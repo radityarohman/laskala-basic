@@ -97,12 +97,17 @@ h1 span {
 
 .h1-container h1 {
   font-size: 48px;
-  text-align: center;
 }
 
 .h1-container h1 span{
   color: #DC8B4C;
 }
+
+.h1-container img{
+  width: 60%;
+
+}
+
 
 
 .text-container {
@@ -113,10 +118,12 @@ h1 span {
 
 /* Paragraph Styling */
 .text-container p {
-  font-size: 26px;
+  font-size: 25px;
   line-height: 1.8;
   margin-bottom: 15px;
 }
+
+
 
 @media (min-width: 768px) {
   .main-section {
@@ -124,6 +131,12 @@ h1 span {
     justify-content: space-between;
     padding: 40px;
   }
+
+  .h1-container img{
+    width: 100%;
+
+  }
+  
 
   .h1-container {
     width: 50%;
@@ -141,4 +154,18 @@ h1 span {
     width: 50%;
     margin-top: 0;
   }
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: var(--orange);
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-top: 10px;
 }

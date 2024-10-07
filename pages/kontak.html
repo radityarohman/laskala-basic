@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laskala Basic | Clothing Brand</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Laskala Basic | Clothing Brand</title>
 
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
-  </head>
-  <body>
-    <div data-include="../includes/header.html"></div>
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link rel="stylesheet" href="/assets/css/kontak.css" />
+	</head>
+	<body>
+		<div data-include="../includes/header.html"></div>
 
-    <h1>Kontak</h1>
+		<div class="container">
+			<h1>Contact <span>Us</span> </h1>
+			<div class="contact-container">
+				<form class="form-box">
+					<div class="form-wrapper">
+						<div class="mob-text">
+							<p class="text-blk contactus-head">Get in Touch</p>
+							<p class="text-blk contactus-subhead">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis
+								diam lectus sapien.
+							</p>
+						</div>
+						<p class="text-blk input-title">Nama</p>
+						<input
+							class="input"
+							name="FirstName"
+							placeholder="John Doe"
+						/>
 
-    <script src="../assets/js/include.js"></script>
-  </body>
+						<p class="text-blk input-title">Email</p>
+						<input
+							class="input"
+							name="Email"
+							placeholder="example@gmail.com"
+						/>
+
+						<p class="text-blk input-title">No.Telepon</p>
+						<input
+							class="input"
+							name="PhoneNumber"
+							placeholder="081234578"
+						/>
+
+						<button class="submit-btn">Submit</button>
+					</div>
+				</form>
+
+				<div class="map-part">
+					<p class="text-blk map-contactus-head">Reach us at</p>
+					<p class="text-blk map-contactus-subhead">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis diam
+						lectus sapien.
+					</p>
+
+					<div class="map-box">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.434328130771!2d106.9230480740249!3d-6.206299660792864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bcabb1368d7%3A0xea46dd080cc5e54c!2sVOCATIONAL%20HIGH%20SCHOOL%20STATE%2069%20OF%20JAKARTA!5e0!3m2!1sen!2sid!4v1728267516460!5m2!1sen!2sid"
+							width="100%"
+							height="300"
+							style="border: 0"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+						></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../assets/js/include.js"></script>
+	</body>
 </html>
