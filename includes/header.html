@@ -6,16 +6,42 @@
     </p>
   </section>
   <nav class="navbar">
-    <img
-      src="/assets/images/logo-laskala-basic.png"
-      alt="logo-laskala-basic"
-      class="nav-logo"
-    />
+    <a href="/index.html">
+      <img
+        src="/assets/images/logo-laskala-basic.png"
+        alt="logo-laskala-basic"
+        class="nav-logo"
+      />
+    </a>
     <ul class="nav-wrapper">
       <li class="nav-item"><a href="/index.html">Beranda</a></li>
       <li class="nav-item"><a href="/pages/tentang.html">Tentang</a></li>
       <li class="nav-item"><a href="/pages/produk.html">Produk</a></li>
       <li class="nav-item"><a href="/pages/kontak.html">Kontak</a></li>
     </ul>
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
+  <ul class="dropdown-menu">
+    <li class="nav-item"><a href="/index.html">Beranda</a></li>
+    <li class="nav-item"><a href="/pages/tentang.html">Tentang</a></li>
+    <li class="nav-item"><a href="/pages/produk.html">Produk</a></li>
+    <li class="nav-item"><a href="/pages/kontak.html">Kontak</a></li>
+  </ul>
 </header>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const dropdownNav = document.querySelector(".dropdown-menu");
+
+    const mobileMenu = () => {
+      hamburgerMenu.classList.toggle("active");
+      dropdownNav.classList.toggle("active");
+    };
+
+    hamburgerMenu.addEventListener("click", mobileMenu);
+  });
+</script>
