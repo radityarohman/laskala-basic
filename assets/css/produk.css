@@ -50,14 +50,21 @@
 /* Card Big */
 .prod-wrapper-big {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
     gap: 15px;
 }
 
 .prod-card-big {
     width: 100%;
     max-width: 555px;
+    background-color: white;
+    border: solid 1px var(--black);
+    padding: 5px;
+    border-radius: 20px;
+    transition: all .2s ease;
 }
+
+
 
 .prod-card-img {
     border-radius: 15px;
@@ -71,22 +78,42 @@
     object-position: 0 10%;
 }
 
-.prod-card-text {
+.prod-card-big .prod-card-text {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-block: 30px;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 15px;
 }
 
-.prod-card-text :nth-child(1) {
-    width: 40%;
+.prod-card-sm .prod-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 10px;
+}
+
+.prod-card-big .prod-card-text :nth-child(1) {
     font-weight: bold;
-    line-height: 25px;
+    font-size: 1.5rem;
+    line-height: 1.25;
 }
 
-.prod-card-text :nth-child(2) {
+.prod-card-big .prod-card-text :nth-child(2) {
     font-weight: bold;
     color: var(--orange);
+    font-size: 1.5rem;
+}
+
+.prod-card-sm .prod-card-text :nth-child(1) {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 1.25;
+}
+
+.prod-card-sm .prod-card-text :nth-child(2) {
+    font-weight: bold;
+    color: var(--orange);
+    font-size: 1.25rem;
 }
 
 /* Card Big */
@@ -96,12 +123,19 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    margin-top: 15px;
 }
 
 .prod-card-sm {
     width: 100%;
     max-width: 365px;
+    background-color: white;
+    border: solid 1px var(--black);
+    padding: 10px;
+    border-radius: 20px;
+    transition: all .2s ease;
 }
+
 
 /* Card Small */
 
@@ -110,10 +144,39 @@
         flex-direction: row;
         text-align: justify;
     }
+    .prod-wrapper-big {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .prod-wrapper-sm {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
     }
+
+    .prod-card-big:hover {
+        scale: 1.02;
+        background-color: hsla(26, 67%, 58%, 0.192);
+    }
+
+    .prod-card-sm:hover {
+        scale: 1.02;
+        background-color: hsla(26, 67%, 58%, 0.277);
+    }    
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .prod-card-big .prod-card-text :nth-child(1) {
+        font-size: 1.125rem;
+    }
+
+    .prod-card-big .prod-card-text :nth-child(2) {
+        font-size: 1.25rem;
+    }
+
+    .prod-card-big, .prod-card-big img {
+        max-width: 1200px;
+    }
+
 }
