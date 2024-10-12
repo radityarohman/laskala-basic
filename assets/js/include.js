@@ -6,7 +6,12 @@ function includeHTML() {
     const file = el.getAttribute("data-include");
     if (file) {
       const fetchPromise = fetch(file)
-        .then(response => response.text())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
         .then(data => {
           el.innerHTML = data;
         })
@@ -34,7 +39,6 @@ function includeHTML() {
       };
 
       checkScreenSize();
-
       window.addEventListener("resize", checkScreenSize);
 
       const checkScrollPosition = () => {
@@ -46,7 +50,21 @@ function includeHTML() {
 
       window.addEventListener("scroll", checkScrollPosition);
     }
+
+    setActiveNav();
   });
 }
 
 window.onload = includeHTML;
+
+function setActiveNav() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.navbar a');
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (currentPath.includes(linkPath)) {
+      link.classList.add('active');
+    }
+  });
+}
