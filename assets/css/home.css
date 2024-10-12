@@ -15,14 +15,6 @@ html, body {
     background-color: var(--white);
 }
 
-
-header .header-banner {
-    text-align: center;
-    padding-block: 10px;
-    background-color: var(--orange);
-    color: var(--white);
-}
-
 .wear-basic {
     background-color: var(--white);
     color: #fff;
@@ -102,7 +94,7 @@ header .header-banner {
     font-size: 48px;
     line-height: 1.2;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .banner-hero-text p {
@@ -182,15 +174,6 @@ header .header-banner {
     color: var(--orange);
 }
 
-.section-separator {
-    width: 20rem;
-    height: 6px;
-    border-radius: 20px;
-    background-color: var(--orange);
-    margin: 20px auto 0;
-    margin-bottom: 20px;
-}
-    
 .section-title::after {
     content: '';
     display: block;
@@ -400,15 +383,36 @@ header .header-banner {
     .best-sellers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .banner-hero {
+        padding: 70px 0;
+    }
+
     .banner-hero-text h1 {
         font-size: 36px;
     }
+
     .banner-hero-text p {
+        font-size: 18px; 
+    }
+
+    .banner-hero .shop-now-btn {
         font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .banner-hero-content {
+        flex-direction: column;
+        align-items: center;
     }
     .banner-hero-image img {
-        max-width: 400px;
+        width: 80%;
+        height: 80%;
     }
+
+    .banner-hero-image {
+        margin-top: 20px;
+    }
+
     .wear-basic-text h2 {
         font-size: 28px;
     }

@@ -59,7 +59,7 @@ window.onload = includeHTML;
 
 function setActiveNav() {
   const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('.navbar a');
+  const navLinks = document.querySelectorAll('.nav-item a');
 
   navLinks.forEach(link => {
     const linkPath = link.getAttribute('href');
