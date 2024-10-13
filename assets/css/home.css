@@ -15,6 +15,76 @@ html, body {
     background-color: var(--white);
 }
 
+
+.banner-hero {
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('../images/logo-laskala-basic.png') no-repeat center center/cover;
+    padding: 100px 0;
+    color: var(--black);
+}
+
+.banner-hero .container-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.banner-hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.banner-hero-text h1 {
+    color: var(--orange);
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.banner-hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+.banner-hero .hero-btn {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-hero .hero-btn:hover {
+    background-color: #c67a3d;
+}
+
+.banner-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
 .wear-basic {
     background-color: var(--white);
     color: #fff;
@@ -58,76 +128,6 @@ html, body {
     justify-content: center;
     margin-bottom: -30px;
     gap: 20px;
-}
-
-
-
-.banner-hero {
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('../images/logo-laskala-basic.png') no-repeat center center/cover;
-    padding: 100px 0;
-    color: var(--black);
-}
-
-.banner-hero .container-hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.banner-hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.banner-hero-text {
-    flex: 1;
-    max-width: 600px;
-}
-
-.banner-hero-text h1 {
-    color: var(--orange);
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.banner-hero-text p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: var(--secondary-color);
-}
-
-.banner-hero .shop-now-btn {
-    background-color: var(--orange);
-    color: var(--white);
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.banner-hero .shop-now-btn:hover {
-    background-color: #c67a3d;
-}
-
-.banner-hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.banner-hero-image img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
 }
 
 .banner-img {
@@ -395,7 +395,7 @@ html, body {
         font-size: 18px; 
     }
 
-    .banner-hero .shop-now-btn {
+    .banner-hero .hero-btn {
         font-size: 16px;
         padding: 10px 20px;
     }
