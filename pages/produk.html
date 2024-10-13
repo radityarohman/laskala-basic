@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laskala Basic | Clothing Brand</title>
 
+    <!-- CSS Global -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/produk.css" />
   </head>
@@ -22,15 +23,29 @@
       <div class="prod-filter-wrapper">
         <h2>Produk Kami</h2>
         <div class="prod-filter">
-          <a href="#" class="filter active-filter">Semua</a>
-          <a href="#" class="filter">Crewneck</a>
-          <a href="#" class="filter">Jaket</a>
-          <a href="#" class="filter">Kimono</a>
-          <a href="#" class="filter">Outer</a>
-          <a href="#" class="filter">Shirt</a>
+          <a href="#" class="filter active-filter" data-filter="Semua">Semua</a>
+          <a href="#" class="filter" data-filter="Crewneck">Crewneck</a>
+          <a href="#" class="filter" data-filter="Jaket">Jaket</a>
+          <a href="#" class="filter" data-filter="Hoodie">Hoodie</a>
+          <a href="#" class="filter" data-filter="Kimono">Kimono</a>
+          <a href="#" class="filter" data-filter="Shirt">Shirt</a>
         </div>
       </div>
-      <div class="prod-wrapper-big">
+      <div class="prod-wrapper-big" id="big-product-list">
+        <!-- <div class="prod-card-big">
+          <a href="#">
+            <img
+              src="/assets/images/products/crewneck/rio-black/rio-black-3.webp"
+              alt="rio-black-1"
+              class="prod-card-img"
+              loading="lazy"
+            />
+            <div class="prod-card-text">
+              <p>Crewneck Casual Pria Rio Black</p>
+              <p>Rp. 400.000</p>
+            </div>
+          </a>
+        </div>
         <div class="prod-card-big">
           <a href="#">
             <img
@@ -44,24 +59,10 @@
               <p>Rp. 400.000</p>
             </div>
           </a>
-        </div>
-        <div class="prod-card-big">
-          <a href="#">
-            <img
-              src="/assets/images/products/crewneck/rio-black/rio-black-3.webp"
-              alt="rio-black-1"
-              class="prod-card-img"
-              loading="lazy"
-            />
-            <div class="prod-card-text">
-              <p>Crewneck Casual Pria Rio Black</p>
-              <p>Rp. 400.000</p>
-            </div>
-          </a>
-        </div>
+        </div> -->
       </div>
-      <div class="prod-wrapper-sm">
-        <div class="prod-card-sm">
+      <div class="prod-wrapper-sm" id="small-product-list">
+        <!-- <div class="prod-card-sm">
           <a href="#">
             <img
               src="/assets/images/products/crewneck/rio-black/rio-black-3.webp"
@@ -116,9 +117,9 @@
               <p>Rp. 400.000</p>
             </div>
           </a>
-        </div>
+        </div> -->
       </div>
-      <div class="prod-wrapper-sm">
+      <!-- <div class="prod-wrapper-sm">
         <div class="prod-card-sm">
           <a href="#">
             <img
@@ -175,9 +176,12 @@
             </div>
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
 
-    <script src="../assets/js/include.js"></script>
+    <div data-include="../includes/footer.html"></div>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/produk.js"></script>
   </body>
 </html>
