@@ -116,6 +116,7 @@ header .header-banner {
     transform: scaleX(0);
     transform-origin: 50% 50%;
     transition: all .2s ease;
+    border-radius: 20px;
 }
 
 .navbar .nav-wrapper .nav-item a:hover::before {
@@ -280,3 +281,13 @@ header .header-banner {
         margin-top: 20px;
     }
 }
+
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+
+::-webkit-scrollbar-thumb {
+    background-color: #DC8B4C; 
+    border-radius: 10px;
+}
+  
