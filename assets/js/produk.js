@@ -164,7 +164,7 @@ function displayProducts(filter) {
     filteredProducts.forEach((product, index) => {
         
         let productCardBig = `
-            <div class="prod-card-big">
+            <div class="prod-card-big" data-aos="fade-up" data-aos-duration="400">
                 <a href="#">
                     <img
                         src="${product.image}"
@@ -181,7 +181,7 @@ function displayProducts(filter) {
         `;
 
         let productCardSmall = `
-            <div class="prod-card-sm">
+            <div class="prod-card-sm" data-aos="fade-up" data-aos-duration="550">
                 <a href="#">
                     <img
                         src="${product.image}"

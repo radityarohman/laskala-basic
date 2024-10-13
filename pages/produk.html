@@ -4,31 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laskala Basic | Clothing Brand</title>
-
-    <!-- CSS Global -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/produk.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div data-include="../includes/header.html"></div>
 
     <div class="container">
       <div class="prod-hero">
-        <h1 class="prod-hero-title">Katalog Produk</h1>
-        <p>
+        <h1
+          class="prod-hero-title"
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
+          Katalog Produk
+        </h1>
+        <p data-aos="fade-left" data-aos-duration="600">
           Temukan koleksi pakaian terbaru kami yang dirancang dengan desain
           modern dan bahan berkualitas tinggi.
         </p>
       </div>
       <div class="prod-filter-wrapper">
-        <h2>Produk Kami</h2>
+        <h2 data-aos="fade-up" data-aos-duration="600">Produk Kami</h2>
         <div class="prod-filter">
-          <a href="#" class="filter active-filter" data-filter="Semua">Semua</a>
-          <a href="#" class="filter" data-filter="Crewneck">Crewneck</a>
-          <a href="#" class="filter" data-filter="Jaket">Jaket</a>
-          <a href="#" class="filter" data-filter="Hoodie">Hoodie</a>
-          <a href="#" class="filter" data-filter="Kimono">Kimono</a>
-          <a href="#" class="filter" data-filter="Shirt">Shirt</a>
+          <a
+            href="#"
+            class="filter active-filter"
+            data-filter="Semua"
+            data-aos="fade-up"
+            data-aos-duration="600"
+            >Semua</a
+          >
+          <a
+            href="#"
+            class="filter"
+            data-filter="Crewneck"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            >Crewneck</a
+          >
+          <a
+            href="#"
+            class="filter"
+            data-filter="Jaket"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            >Jaket</a
+          >
+          <a
+            href="#"
+            class="filter"
+            data-filter="Hoodie"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            >Hoodie</a
+          >
+          <a
+            href="#"
+            class="filter"
+            data-filter="Kimono"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            >Kimono</a
+          >
+          <a
+            href="#"
+            class="filter"
+            data-filter="Shirt"
+            data-aos="fade-up"
+            data-aos-duration="1100"
+            >Shirt</a
+          >
         </div>
       </div>
       <div class="prod-wrapper-big" id="big-product-list"></div>
@@ -39,5 +86,9 @@
 
     <script src="/assets/js/include.js"></script>
     <script src="/assets/js/produk.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
