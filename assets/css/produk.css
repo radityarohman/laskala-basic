@@ -40,11 +40,15 @@
     padding: 15px 30px;
     border: solid black 1px;
     border-radius: 50px;
+    transition: all .3s ease;
+}
+
+.filter:hover {
+    background-color: var(--orange);
 }
 
 .active-filter {
     background-color: var(--orange);
-    border: none;
 }
 
 /* Card Big */

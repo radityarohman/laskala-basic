@@ -144,12 +144,6 @@ let products = {
             harga: "Rp. 320.000",
             image: "/assets/images/products/shirt/laskala-basic-jumper-grey1.webp"
         },
-        {
-            namaProduk: "Basic Jumper Shirt Pria Kora Grey",
-            kategori: "Shirt",
-            harga: "Rp. 320.000",
-            image: "/assets/images/products/shirt/laskala-basic-jumper-grey1.webp"
-        },
     ]
 };
 
