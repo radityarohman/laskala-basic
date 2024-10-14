@@ -3,41 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laskala Basic | Clothing Brand</title>
+    <title>Detail Produk | Clothing Brand</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/produk.css" />
     <link rel="stylesheet" href="/assets/css/detail-produk.css" />
   </head>
   <body>
     <div data-include="../includes/header.html"></div>
-    <div id="product-detail"></div>
 
     <div class="container">
-      <div class="detail-product">
-        <div class="product-image-wrapper">
-          <img
-            src="/assets/images/products/crewneck/arthur-grey-1.webp"
-            alt="arthur-grey"
-            class="big-image"
-          />
-          <div class="small-image-wrapper">
-            <img
-              src="/assets/images/products/crewneck/arthur-grey-2.webp"
-              alt="arthur-grey"
-              loading="lazy"
-            />
-            <img
-              src="/assets/images/products/crewneck/arthur-grey-3.webp"
-              alt="arthur-grey"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div class="detail-product-text"></div>
+      <div id="product-detail"></div>
+
+      <div class="related-products">
+        <h2>Produk Lainnya</h2>
+        <div class="prod-wrapper-sm" id="random-products"></div>
       </div>
     </div>
 
     <div data-include="../includes/footer.html"></div>
+
     <script src="/assets/js/include.js"></script>
     <script src="/assets/js/data-produk.js"></script>
+    <script src="/assets/js/detail-produk.js"></script>
   </body>
 </html>
