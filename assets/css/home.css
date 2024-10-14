@@ -385,8 +385,8 @@ html, body {
     }
     .banner-hero {
         padding: 70px 0;
+        background: none;
     }
-
     .banner-hero-text h1 {
         font-size: 36px;
     }
@@ -401,7 +401,7 @@ html, body {
     }
 
     .banner-hero-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
     .banner-hero-image img {
@@ -412,7 +412,6 @@ html, body {
     .banner-hero-image {
         margin-top: 20px;
     }
-
     .wear-basic-text h2 {
         font-size: 28px;
     }
@@ -436,6 +435,16 @@ html, body {
 
     .step::after {
         display: none;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .wear-basic-text h2 {
+        font-size: 20px;
+    }
+    .image-row {
+        margin-left: 20px;
     }
 
 }
