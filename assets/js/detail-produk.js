@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const imageLain = selectedProduct.imageLain
                 ? selectedProduct.imageLain
                     .map((image, index) => `
-                        <img src="${image}" alt="${selectedProduct.namaProduk} image ${index + 1}" class="thumbnail-image" />
+                        <img src="${image}" alt="${selectedProduct.namaProduk} image ${index + 1}" class="thumbnail-image" loading="lazy" />
                     `).join("")
                 : "";
 
@@ -26,17 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
             // Render HTML produk
             productDetailDiv.innerHTML = `
                 <div class="product-container">
-                    <div class="product-images">
+                    <div class="product-images" data-aos="fade-right" duration="300">
                         <div class="product-main-image">
-                            <img src="${selectedProduct.image}" alt="${selectedProduct.namaProduk}" id="mainImage" />
+                            <img src="${selectedProduct.image}" alt="${selectedProduct.namaProduk}" id="mainImage" loading="lazy" />
                         </div>
                         <div class="product-thumbnails">
-                            <img src="${selectedProduct.image}" alt="Main Thumbnail" class="thumbnail-image" />
+                            <img src="${selectedProduct.image}" alt="Main Thumbnail" class="thumbnail-image" loading="lazy"/>
                             ${imageLain}
                         </div>
                     </div>
 
-                    <div class="product-description">
+                    <div class="product-description" data-aos="fade-left" duration="300">
                         <div>
                             <h1>${selectedProduct.namaProduk}</h1>
                             <p class="price">${selectedProduct.harga}</p>
@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span></span>
                             <div class="links">
                                 <a href="${selectedProduct.linkShopee}">
-                                <img src="/assets/icons/shopee.png" alt="shopee" />
+                                <img src="/assets/icons/shopee.png" alt="shopee" loading="lazy" />
                                 </a>
                                 <a href="https://instagram.com/laskalabasic/">
-                                    <img src="/assets/icons/instagram.png" alt="shopee" />
+                                    <img src="/assets/icons/instagram.png" alt="shopee" loading="lazy" />
                                 </a>
                             </div>
                         </div>    
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomProductsDiv = document.getElementById("random-products");
     randomProducts.forEach(product => {
         randomProductsDiv.innerHTML += `
-        <div class="prod-card-sm">
+        <div class="prod-card-sm" data-aos="fade-up">
                 <a href="detail-produk.html?product=${product.id}">
                     <img
                         src="${product.image}"

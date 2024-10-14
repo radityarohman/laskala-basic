@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/produk.css" />
     <link rel="stylesheet" href="/assets/css/detail-produk.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div data-include="../includes/header.html"></div>
@@ -14,7 +15,7 @@
     <div class="container">
       <div id="product-detail"></div>
 
-      <div class="related-products">
+      <div class="related-products" data-aos="fade-up">
         <h2>Produk Lainnya</h2>
         <div class="prod-wrapper-sm" id="random-products"></div>
       </div>
@@ -25,5 +26,9 @@
     <script src="/assets/js/include.js"></script>
     <script src="/assets/js/data-produk.js"></script>
     <script src="/assets/js/detail-produk.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
