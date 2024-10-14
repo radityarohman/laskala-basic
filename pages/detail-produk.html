@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laskala Basic | Clothing Brand</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <div id="product-detail"></div>
+
+    <script src="/assets/js/data-produk.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Ambil parameter query string dari URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const productIndex = urlParams.get("product"); // Ambil indeks produk dari URL
+
+        // Jika ada indeks produk yang ditemukan
+        if (productIndex !== null) {
+          // Ambil produk berdasarkan indeks yang diterima dari URL
+          const selectedProduct = products.data[productIndex];
+
+          if (selectedProduct) {
+            // Dapatkan elemen div untuk menampilkan detail produk
+            const productDetailDiv = document.getElementById("product-detail");
+
+            // Cek jika ada gambar tambahan, jika tidak ada, set array kosong
+            const additionalImages = selectedProduct.imageLain
+              ? selectedProduct.imageLain
+                  .map(
+                    (image) =>
+                      `<img src="${image}" alt="${selectedProduct.namaProduk}" loading="lazy" />`
+                  )
+                  .join("")
+              : "";
+
+            // Update konten HTML dari elemen product-detail
+            productDetailDiv.innerHTML = `
+              <div class="product-detail-wrapper">
+                <h1>${selectedProduct.namaProduk}</h1>
+                <p>${selectedProduct.harga}</p>
+                <img src="${selectedProduct.image}" alt="${selectedProduct.namaProduk}" />
+                <div class="additional-images">
+                  ${additionalImages}
+                </div>
+              </div>
+            `;
+          } else {
+            // Jika produk tidak ditemukan
+            document.getElementById("product-detail").innerHTML =
+              "<p>Produk tidak ditemukan.</p>";
+          }
+        } else {
+          // Jika tidak ada produk terpilih
+          document.getElementById("product-detail").innerHTML =
+            "<p>Produk tidak ditemukan.</p>";
+        }
+      });
+    </script>
+  </body>
+</html>
