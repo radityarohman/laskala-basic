@@ -5,66 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laskala Basic | Clothing Brand</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/detail-produk.css" />
   </head>
   <body>
+    <div data-include="../includes/header.html"></div>
     <div id="product-detail"></div>
 
+    <div class="container">
+      <div class="detail-product">
+        <div class="product-image-wrapper">
+          <img
+            src="/assets/images/products/crewneck/arthur-grey-1.webp"
+            alt="arthur-grey"
+            class="big-image"
+          />
+          <div class="small-image-wrapper">
+            <img
+              src="/assets/images/products/crewneck/arthur-grey-2.webp"
+              alt="arthur-grey"
+              loading="lazy"
+            />
+            <img
+              src="/assets/images/products/crewneck/arthur-grey-3.webp"
+              alt="arthur-grey"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="detail-product-text"></div>
+      </div>
+    </div>
+
+    <div data-include="../includes/footer.html"></div>
+    <script src="/assets/js/include.js"></script>
     <script src="/assets/js/data-produk.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Ambil parameter query string dari URL
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const productId = urlParams.get("product"); // Ambil ID produk dari URL
-
-        // Jika ada ID produk yang ditemukan
-        if (productId !== null) {
-          // Cari produk berdasarkan ID yang diterima dari URL
-          const selectedProduct = products.data.find(
-            (product) => product.id == productId
-          );
-
-          if (selectedProduct) {
-            const productDetailDiv = document.getElementById("product-detail");
-
-            const imageLain = selectedProduct.imageLain
-              ? selectedProduct.imageLain
-                  .map(
-                    (image) =>
-                      `<img src="${image}" alt="${selectedProduct.namaProduk}" loading="lazy" />`
-                  )
-                  .join("")
-              : "";
-
-            const deskripsiProduk = selectedProduct.deskripsiProduk
-              .map((desk) => `<li>${desk}</li>`)
-              .join("");
-
-            productDetailDiv.innerHTML = `
-              <div class="product-detail-wrapper">
-                <h1>${selectedProduct.namaProduk}</h1>
-                <p>${selectedProduct.harga}</p>
-                <img src="${selectedProduct.image}" alt="${selectedProduct.namaProduk}" />
-                <div class="additional-images">
-                  ${imageLain}
-                </div>
-                <h2>Deskripsi Produk</h2>
-                <ul>
-                  ${deskripsiProduk}
-                </ul>
-              </div>
-            `;
-          } else {
-            // Jika produk tidak ditemukan
-            document.getElementById("product-detail").innerHTML =
-              "<p>Produk tidak ditemukan.</p>";
-          }
-        } else {
-          // Jika tidak ada produk terpilih
-          document.getElementById("product-detail").innerHTML =
-            "<p>Produk tidak ditemukan.</p>";
-        }
-      });
-    </script>
   </body>
 </html>

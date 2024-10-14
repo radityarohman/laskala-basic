@@ -1,0 +1,16 @@
+.detail-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-image-wrapper {
+    width: 40%;
+}
+
+.small-image-wrapper {
+    display: flex;
+}
+
+.small-image-wrapper img {
+    width: 100%;
+}
