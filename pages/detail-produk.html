@@ -27,7 +27,7 @@
           if (selectedProduct) {
             const productDetailDiv = document.getElementById("product-detail");
 
-            const additionalImages = selectedProduct.imageLain
+            const imageLain = selectedProduct.imageLain
               ? selectedProduct.imageLain
                   .map(
                     (image) =>
@@ -36,14 +36,22 @@
                   .join("")
               : "";
 
+            const deskripsiProduk = selectedProduct.deskripsiProduk
+              .map((desk) => `<li>${desk}</li>`)
+              .join("");
+
             productDetailDiv.innerHTML = `
               <div class="product-detail-wrapper">
                 <h1>${selectedProduct.namaProduk}</h1>
                 <p>${selectedProduct.harga}</p>
                 <img src="${selectedProduct.image}" alt="${selectedProduct.namaProduk}" />
                 <div class="additional-images">
-                  ${additionalImages}
+                  ${imageLain}
                 </div>
+                <h2>Deskripsi Produk</h2>
+                <ul>
+                  ${deskripsiProduk}
+                </ul>
               </div>
             `;
           } else {
