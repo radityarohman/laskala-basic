@@ -9,7 +9,17 @@ let products = {
             imageLain: [
                 "/assets/images/products/crewneck/arthur-grey-2.webp",
                 "/assets/images/products/crewneck/arthur-grey-3.webp"
-            ]
+            ],
+            linkShopee: "https://shopee.co.id/Laskala-Basic-Crewneck-Casual-Pria-Arthur-Grey-i.724380667.21886888037?sp_atk=64d78637-6482-4bc8-a552-73b643cce400&xptdk=64d78637-6482-4bc8-a552-73b643cce400",
+            deskripsiProduk: [
+                "Warna : Abu-Abu",
+                "Bahan Dasar Baju : Premium Cotton Fleece. Cotton fleece pada bagian luar dan dalam permukaan kain terasa lembut, sehingga nyaman ketika digunakan",
+                "Motif Lengan : Memiliki aksen batik pusaka dan renanda di bagian dada yang membuat desain batik semakin elegan namun tetap dapat digunakan sebagai daily wear.",
+                "Ukuran : S, M, L, XL & XXL",
+                "Exclusive packaging (reusable travel bag)",
+                "Semua varian batik di foto menggunakan kamera A7S II",
+                "Real pict 100% "
+            ],
         },
         {
             id: 2,
