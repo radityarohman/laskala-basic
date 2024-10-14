@@ -85,7 +85,7 @@ document.querySelectorAll(".filter").forEach(link => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const savedCategory = localStorage.getItem("selectedCategory") || "Semua"; // 
+    const savedCategory = localStorage.getItem("selectedCategory") || "Semua";  
     setActiveFilter(savedCategory);
     displayProducts(savedCategory);
 });

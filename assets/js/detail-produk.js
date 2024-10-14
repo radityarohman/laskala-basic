@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 .map(desk => `<li>${desk}</li>`)
                 .join("");
 
-            // Render HTML produk
             productDetailDiv.innerHTML = `
                 <div class="product-container">
                     <div class="product-images" data-aos="fade-right" duration="300">
