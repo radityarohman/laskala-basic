@@ -15,18 +15,18 @@
         // Ambil parameter query string dari URL
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const productIndex = urlParams.get("product"); // Ambil indeks produk dari URL
+        const productId = urlParams.get("product"); // Ambil ID produk dari URL
 
-        // Jika ada indeks produk yang ditemukan
-        if (productIndex !== null) {
-          // Ambil produk berdasarkan indeks yang diterima dari URL
-          const selectedProduct = products.data[productIndex];
+        // Jika ada ID produk yang ditemukan
+        if (productId !== null) {
+          // Cari produk berdasarkan ID yang diterima dari URL
+          const selectedProduct = products.data.find(
+            (product) => product.id == productId
+          );
 
           if (selectedProduct) {
-            // Dapatkan elemen div untuk menampilkan detail produk
             const productDetailDiv = document.getElementById("product-detail");
 
-            // Cek jika ada gambar tambahan, jika tidak ada, set array kosong
             const additionalImages = selectedProduct.imageLain
               ? selectedProduct.imageLain
                   .map(
@@ -36,7 +36,6 @@
                   .join("")
               : "";
 
-            // Update konten HTML dari elemen product-detail
             productDetailDiv.innerHTML = `
               <div class="product-detail-wrapper">
                 <h1>${selectedProduct.namaProduk}</h1>
